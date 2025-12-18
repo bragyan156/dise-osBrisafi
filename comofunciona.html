@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brisafi - Cómo Funciona</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0ea5e9", // Sky blue from logo
+                        secondary: "#0369a1", // Darker blue for contrast
+                        "primary-dark": "#0284c7",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0f172a", // Slate 900
+                        "surface-light": "#f8fafc", // Slate 50
+                        "surface-dark": "#1e293b", // Slate 800
+                        "text-light": "#334155", // Slate 700
+                        "text-dark": "#e2e8f0", // Slate 200
+                        "heading-light": "#0f172a",
+                        "heading-dark": "#f8fafc",
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        };
+    </script>
+<style>
+        .step-connector {
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background-color: #e2e8f0;
+            z-index: 0;
+            transform: translateX(-50%);
+        }
+        .dark .step-connector {
+            background-color: #334155;
+        }
+        @media (min-width: 1024px) {
+            .step-connector {
+                top: 50%;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                transform: translateY(-50%);
+            }
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient-light {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        .hero-gradient-dark {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #0284c7, #0ea5e9);
+        }
+    </style>
+    </style>
+</head>
+<body class="font-sans antialiased bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+<nav class="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex-shrink-0 flex items-center gap-3">
+<img alt="Brisafi Logo" class="h-10 w-auto" src="https://www.brisafi.com/icono-transparent.png"/>
+<a class="font-bold text-xl tracking-tight text-slate-900 dark:text-white" href="landingpage.html">Brisafi</a>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition" href="marketplace.html">Marketplace</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition" href="comofunciona.html">Cómo funciona</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition" href="#">Tokeniza tu inmueble</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition" href="#">Sobre nosotros</a>
+</div>
+<div class="hidden md:flex items-center space-x-4">
+<a class="text-sm font-medium text-slate-700 hover:text-primary dark:text-slate-200 dark:hover:text-primary transition" href="#">Acceder al Portal</a>
+<a class="bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-full text-sm font-medium transition shadow-md shadow-primary/20" href="#">
+                        Conectar Wallet
+                    </a>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-slate-600 dark:text-slate-300 hover:text-primary focus:outline-none">
+<span class="material-icons-round text-3xl">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+
+<section class="py-24 bg-white dark:bg-background-dark">
+<div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-white dark:from-slate-900 dark:to-background-dark -z-10"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
+                Cómo funciona la inversión <br class="hidden md:block"/> en <span class="text-primary">Activos Reales</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Brisafi democratiza el acceso a grandes inversiones mediante la tecnología. Entiende paso a paso cómo convertimos activos tangibles en oportunidades digitales para ti.
+            </p>
+<div class="flex justify-center gap-4">
+<a class="bg-surface-light dark:bg-surface-dark text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 px-6 py-3 rounded-lg font-medium hover:border-primary dark:hover:border-primary transition-all flex items-center gap-2" href="#proceso">
+<span class="material-icons-outlined text-primary">arrow_downward</span>
+                    Ver el proceso
+                </a>
+</div>
+</div>
+</section>
+<section class="relative pt-20 pb-32 overflow-hidden hero-gradient-light dark:hero-gradient-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="font-display text-3xl font-bold text-heading-light dark:text-heading-dark mb-4">El Ciclo de Vida del Token</h2>
+<p class="text-text-light dark:text-gray-400 max-w-2xl mx-auto">Un proceso estructurado para garantizar seguridad jurídica y rentabilidad.</p>
+</div>
+<div class="relative">
+<div class="hidden lg:block absolute top-1/2 left-0 w-full h-1 bg-gray-200 dark:bg-gray-700 transform -translate-y-1/2 z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
+<div class="group relative bg-white dark:bg-background-dark p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-all duration-300">
+<div class="w-16 h-16 mx-auto bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-blue-100 dark:border-blue-800 relative z-20">
+<span class="material-icons-outlined text-3xl text-primary">manage_search</span>
+</div>
+<div class="text-center">
+<div class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary text-white text-xs font-bold mb-3">1</div>
+<h3 class="font-display text-lg font-bold text-heading-light dark:text-heading-dark mb-2">Selección</h3>
+<p class="text-sm text-text-light dark:text-gray-400 leading-snug">
+                                Identificamos y auditamos activos de alto valor (inmobiliario, deuda, maquinaria) con potencial de retorno.
+                            </p>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-background-dark p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-all duration-300">
+<div class="w-16 h-16 mx-auto bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-blue-100 dark:border-blue-800 relative z-20">
+<span class="material-icons-outlined text-3xl text-primary">gavel</span>
+</div>
+<div class="text-center">
+<div class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary text-white text-xs font-bold mb-3">2</div>
+<h3 class="font-display text-lg font-bold text-heading-light dark:text-heading-dark mb-2">Estructuración</h3>
+<p class="text-sm text-text-light dark:text-gray-400 leading-snug">
+                                Creamos el vehículo legal (SPV) que posee el activo. Se definen los contratos de derechos económicos.
+                            </p>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-background-dark p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-all duration-300 transform lg:-translate-y-4">
+<div class="w-16 h-16 mx-auto bg-primary text-white rounded-full flex items-center justify-center mb-6 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-300 relative z-20">
+<span class="material-icons-outlined text-3xl">token</span>
+</div>
+<div class="text-center">
+<div class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary text-white text-xs font-bold mb-3">3</div>
+<h3 class="font-display text-lg font-bold text-heading-light dark:text-heading-dark mb-2">Tokenización</h3>
+<p class="text-sm text-text-light dark:text-gray-400 leading-snug">
+                                Emisión de tokens digitales que representan los derechos sobre los flujos de caja del activo.
+                            </p>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-background-dark p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-all duration-300">
+<div class="w-16 h-16 mx-auto bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-blue-100 dark:border-blue-800 relative z-20">
+<span class="material-icons-outlined text-3xl text-primary">savings</span>
+</div>
+<div class="text-center">
+<div class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary text-white text-xs font-bold mb-3">4</div>
+<h3 class="font-display text-lg font-bold text-heading-light dark:text-heading-dark mb-2">Inversión</h3>
+<p class="text-sm text-text-light dark:text-gray-400 leading-snug">
+                                Los inversores adquieren tokens desde la plataforma Brisafi de forma simple y 100% digital.
+                            </p>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-background-dark p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-all duration-300">
+<div class="w-16 h-16 mx-auto bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-blue-100 dark:border-blue-800 relative z-20">
+<span class="material-icons-outlined text-3xl text-primary">payments</span>
+</div>
+<div class="text-center">
+<div class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary text-white text-xs font-bold mb-3">5</div>
+<h3 class="font-display text-lg font-bold text-heading-light dark:text-heading-dark mb-2">Distribución</h3>
+<p class="text-sm text-text-light dark:text-gray-400 leading-snug">
+                                Los beneficios generados por el activo se distribuyen automáticamente a las wallets de los inversores.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-slate-50 dark:bg-background-dark border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<span class="text-primary font-semibold tracking-wide text-sm uppercase">Claridad Legal</span>
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mt-2">¿Qué representa tu Token en Brisafi?</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-4">Transparencia total sobre la naturaleza jurídica del activo.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+<div class="bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-sm border-t-4 border-t-primary border-l border-r border-b border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-3 mb-6">
+<div class="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-full text-primary">
+<span class="material-icons-round">check_circle</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Lo que SÍ es</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-primary text-sm mt-1">arrow_forward</span>
+<span class="text-slate-600 dark:text-slate-300 text-sm">Derecho contractual a recibir beneficios económicos (rendimientos).</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-primary text-sm mt-1">arrow_forward</span>
+<span class="text-slate-600 dark:text-slate-300 text-sm">Registro digital inmutable de tu participación en el financiamiento.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-primary text-sm mt-1">arrow_forward</span>
+<span class="text-slate-600 dark:text-slate-300 text-sm">Activo transferible dentro de la plataforma (Mercado Secundario).</span>
+</li>
+</ul>
+</div>
+<div class="bg-white dark:bg-surface-dark p-8 rounded-2xl shadow-sm border-t-4 border-t-slate-400 dark:border-t-slate-500 border-l border-r border-b border-slate-100 dark:border-slate-700 opacity-90">
+<div class="flex items-center gap-3 mb-6">
+<div class="bg-slate-100 dark:bg-slate-700 p-2 rounded-full text-slate-500 dark:text-slate-300">
+<span class="material-icons-round">cancel</span>
+</div>
+<h3 class="text-xl font-bold text-slate-700 dark:text-slate-200">Lo que NO es</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-slate-400 text-sm mt-1">close</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm">No es un título de propiedad directa sobre el inmueble o activo físico.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-slate-400 text-sm mt-1">close</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm">No otorga derechos de uso, goce o votación sobre la gestión del activo.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-slate-400 text-sm mt-1">close</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm">No es un valor mobiliario tradicional (acción de bolsa).</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 bg-white dark:bg-surface-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-3 gap-8">
+<div class="flex flex-col items-center text-center p-6">
+<div class="h-12 w-12 bg-blue-50 dark:bg-slate-800 rounded-xl flex items-center justify-center text-primary mb-4">
+<span class="material-icons-round">lock</span>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-2">Seguridad Bancaria</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Infraestructura tecnológica con estándares de encriptación de grado financiero.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6">
+<div class="h-12 w-12 bg-blue-50 dark:bg-slate-800 rounded-xl flex items-center justify-center text-primary mb-4">
+<span class="material-icons-round">description</span>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-2">Respaldo Contractual</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Cada token está vinculado jurídicamente a un contrato de mandato o participación.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6">
+<div class="h-12 w-12 bg-blue-50 dark:bg-slate-800 rounded-xl flex items-center justify-center text-primary mb-4">
+<span class="material-icons-round">visibility</span>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-2">Transparencia Blockchain</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">Trazabilidad completa de transacciones y propiedad en libro mayor distribuido.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary dark:bg-slate-900"></div>
+<div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Comienza a construir tu portafolio digital</h2>
+<p class="text-blue-100 text-lg mb-10 max-w-2xl mx-auto">Únete a la evolución financiera. Regístrate en minutos y accede a oportunidades previamente reservadas para grandes capitales.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-white text-secondary font-bold px-8 py-3 rounded-full hover:bg-blue-50 transition shadow-lg">
+                    Crear Cuenta
+                </button>
+<button class="bg-transparent border border-white text-white font-medium px-8 py-3 rounded-full hover:bg-white/10 transition">
+                    Agendar Llamada
+                </button>
+</div>
+</div>
+</section>
+
+<footer class="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+<div class="col-span-2 lg:col-span-2">
+<div class="flex items-center gap-2 mb-4">
+<img alt="Brisafi Logo" class="h-8 w-auto opacity-80" src="https://www.brisafi.com/icono-transparent.png"/>
+<span class="font-bold text-lg text-slate-700 dark:text-slate-300">Brisafi</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm max-w-xs mb-6">
+                        Plataforma líder en tokenización de derechos económicos sobre activos reales. Democratizando el acceso a inversiones institucionales.
+                    </p>
+<div class="flex space-x-4">
+<a class="text-slate-400 hover:text-primary transition" href="#"><span class="material-icons-round">facebook</span></a>
+<a class="text-slate-400 hover:text-primary transition" href="#"><span class="material-icons-round">smart_display</span></a> 
+<a class="text-slate-400 hover:text-primary transition" href="#"><span class="material-icons-round">work</span></a> 
+</div>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-4">Plataforma</h4>
+<ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary" href="#">Mercado</a></li>
+<li><a class="hover:text-primary" href="#">Cómo funciona</a></li>
+<li><a class="hover:text-primary" href="#">Para emisores</a></li>
+<li><a class="hover:text-primary" href="#">Para inversores</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-4">Compañía</h4>
+<ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary" href="#">Sobre nosotros</a></li>
+<li><a class="hover:text-primary" href="#">Carreras</a></li>
+<li><a class="hover:text-primary" href="#">Blog</a></li>
+<li><a class="hover:text-primary" href="#">Contacto</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-4">Legal</h4>
+<ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary" href="#">Términos de uso</a></li>
+<li><a class="hover:text-primary" href="#">Privacidad</a></li>
+<li><a class="hover:text-primary" href="#">Cookies</a></li>
+<li><a class="hover:text-primary" href="#">Disclaimer</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500 dark:text-slate-500">
+<p>© 2025 Brisafi. Todos los derechos reservados.</p>
+<div class="mt-4 md:mt-0 flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span>Sistemas operativos</span>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+        // Simple dark mode toggle logic
+        const toggleButton = document.querySelector('button');
+        const htmlElement = document.documentElement;
+        const iconSpan = toggleButton.querySelector('span');
+        toggleButton.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            if (htmlElement.classList.contains('dark')) {
+                iconSpan.textContent = 'light_mode';
+            } else {
+                iconSpan.textContent = 'dark_mode';
+            }
+        });
+    </script>
+
+</body></html>
