@@ -63,14 +63,64 @@
 <div class="hidden md:flex space-x-8 items-center">
 <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition" href="marketplace.html">Marketplace</a>
 <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition" href="comofunciona.html">Cómo funciona</a>
-<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition" href="#">Tokeniza tu inmueble</a>
-<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition" href="#">Sobre nosotros</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition" href="tokenizatuinmueble.html">Tokeniza tu inmueble</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition" href="aboutus.html">Sobre nosotros</a>
 </div>
 <div class="hidden md:flex items-center space-x-4">
-<a class="text-sm font-medium text-slate-700 hover:text-primary dark:text-slate-200 dark:hover:text-primary transition" href="#">Acceder al Portal</a>
+<div class="relative" id="portalWrapper">
+  <button
+    id="portalBtn"
+    type="button"
+    class="text-sm font-medium text-slate-700 hover:text-primary dark:text-slate-200 dark:hover:text-primary transition flex items-center gap-1"
+  >
+    Acceder al Portal
+  </button>
+
+  <!-- Dropdown -->
+  <div
+    id="portalDropdown"
+    class="absolute right-0 mt-3 w-64 rounded-xl bg-white dark:bg-slate-900 shadow-xl border border-slate-200 dark:border-slate-800 hidden z-50"
+  >
+    <a
+      href="logininversor.html"
+      class="block px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"
+    >
+      <p class="text-sm font-semibold text-slate-900 dark:text-white">
+        Portal Inversor
+      </p>
+      <p class="text-xs text-slate-500 dark:text-slate-400">
+        Gestiona tus inversiones
+      </p>
+    </a>
+
+    <a
+      href="/portal/promotor"
+      class="block px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"
+    >
+      <p class="text-sm font-semibold text-slate-900 dark:text-white">
+        Portal Promotor
+      </p>
+      <p class="text-xs text-slate-500 dark:text-slate-400">
+        Tokeniza tus inmuebles
+      </p>
+    </a>
+
+    <a
+      href="/portal/admin"
+      class="block px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"
+    >
+      <p class="text-sm font-semibold text-slate-900 dark:text-white">
+        Portal Admin
+      </p>
+      <p class="text-xs text-slate-500 dark:text-slate-400">
+        Gestiona la plataforma
+      </p>
+    </a>
+  </div>
+</div>
+
 <a class="bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-full text-sm font-medium transition shadow-md shadow-primary/20" href="#">
-                        Conectar Wallet
-                    </a>
+                        Conectar Wallet</a>
 </div>
 <div class="md:hidden flex items-center">
 <button class="text-slate-600 dark:text-slate-300 hover:text-primary focus:outline-none">
@@ -441,5 +491,24 @@
 </div>
 </div>
 </footer>
+<script>
+  const portalBtn = document.getElementById("portalBtn");
+  const portalDropdown = document.getElementById("portalDropdown");
+  const portalWrapper = document.getElementById("portalWrapper");
 
-</body></html>
+  portalBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    portalDropdown.classList.toggle("hidden");
+  });
+
+  document.addEventListener("click", () => {
+    portalDropdown.classList.add("hidden");
+  });
+
+  portalWrapper.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+</script>
+
+</body>
+</html>

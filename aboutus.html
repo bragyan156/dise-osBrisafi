@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brisafi - Tokenización Institucional de RWA</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0284c7", // Sky 600 - A professional, trustworthy blue
+              secondary: "#0ea5e9", // Sky 500 - Lighter blue accent
+              "background-light": "#ffffff",
+              "background-dark": "#0f172a", // Slate 900
+              "surface-light": "#f8fafc", // Slate 50
+              "surface-dark": "#1e293b", // Slate 800
+              "text-light": "#334155", // Slate 700
+              "text-dark": "#cbd5e1", // Slate 300
+              "heading-light": "#0f172a", // Slate 900
+              "heading-dark": "#f8fafc", // Slate 50
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.375rem",
+              'xl': "1rem",
+              '2xl': "1.5rem",
+            },
+            boxShadow: {
+                'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+            }
+          },
+        },
+      };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark transition-colors duration-300">
+<nav class="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex-shrink-0 flex items-center gap-3">
+<img alt="Brisafi Logo" class="h-10 w-auto" src="https://www.brisafi.com/icono-transparent.png"/>
+<a class="font-bold text-xl tracking-tight text-slate-900 dark:text-white" href="landingpage.html">Brisafi</a>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition" href="marketplace.html">Marketplace</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition" href="comofunciona.html">Cómo funciona</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition" href="tokenizatuinmueble.html">Tokeniza tu inmueble</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition" href="aboutus.html">Sobre nosotros</a>
+</div>
+<div class="hidden md:flex items-center space-x-4">
+<a class="text-sm font-medium text-slate-700 hover:text-primary dark:text-slate-200 dark:hover:text-primary transition" href="#">Acceder al Portal</a>
+<a class="bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-full text-sm font-medium transition shadow-md shadow-primary/20" href="#">
+                        Conectar Wallet</a>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-slate-600 dark:text-slate-300 hover:text-primary focus:outline-none">
+<span class="material-icons-round text-3xl">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<header class="relative overflow-hidden bg-surface-light dark:bg-surface-dark pt-16 pb-24 lg:pt-32 lg:pb-40">
+<div class="absolute inset-0 opacity-10 dark:opacity-5">
+<svg class="h-full w-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+<path d="M0 100 C 20 0 50 0 100 100 Z" fill="url(#gradient)"></path>
+<defs>
+<linearGradient id="gradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#0284c7;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:1"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-heading-light dark:text-heading-dark tracking-tight mb-6">
+                Uniendo las Finanzas Tradicionales <br class="hidden md:block"/> con la <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Infraestructura Blockchain</span>
+</h1>
+<p class="mt-4 max-w-2xl mx-auto text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
+                Brisafi es una plataforma institucional para la tokenización de activos del mundo real a través de derechos contractuales económicos, aportando liquidez, transparencia y cumplimiento a los mercados globales.
+            </p>
+</div>
+</header>
+<section class="py-20 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+<div class="flex flex-col gap-6">
+<div class="h-12 w-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-primary">
+<span class="material-icons-outlined text-2xl">flag</span>
+</div>
+<div>
+<h2 class="text-3xl font-display font-bold text-heading-light dark:text-heading-dark mb-4">Nuestra Misión</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Democratizar el acceso a activos institucionales de alto valor, construyendo un puente seguro y regulado entre el valor económico tangible y la tecnología de registro distribuido. Nos esforzamos por reducir la fricción en los mercados de capitales y desbloquear la liquidez para los originadores de activos en todo el mundo.
+                        </p>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="h-12 w-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-primary">
+<span class="material-icons-outlined text-2xl">visibility</span>
+</div>
+<div>
+<h2 class="text-3xl font-display font-bold text-heading-light dark:text-heading-dark mb-4">Nuestra Visión</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Convertirnos en el estándar global para la tokenización de Activos del Mundo Real (RWA), creando un ecosistema financiero donde el valor se mueve instantánea, transparente y seguramente a través de las fronteras, sin las ineficiencias de los sistemas heredados.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-surface-light dark:bg-surface-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl font-display font-bold text-heading-light dark:text-heading-dark mb-4">Por qué los Inversores Institucionales eligen Brisafi</h2>
+<p class="text-slate-600 dark:text-slate-400">Nuestra plataforma está diseñada para un cumplimiento riguroso y la máxima eficiencia económica.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-soft hover:shadow-xl transition-shadow duration-300">
+<span class="material-icons-outlined text-4xl text-primary mb-6">gavel</span>
+<h3 class="text-xl font-bold text-heading-light dark:text-heading-dark mb-3">Certeza Legal</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Cada token representa un derecho económico legalmente exigible. Utilizamos sólidas estructuras SPV para garantizar la separación de la bancarrota y una clara línea de propiedad.
+                    </p>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-soft hover:shadow-xl transition-shadow duration-300">
+<span class="material-icons-outlined text-4xl text-primary mb-6">trending_up</span>
+<h3 class="text-xl font-bold text-heading-light dark:text-heading-dark mb-3">Mayor Liquidez</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Al fraccionar activos de alto valor, facilitamos el comercio en el mercado secundario y ciclos de liquidación más rápidos en comparación con los mercados privados tradicionales.
+                    </p>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-soft hover:shadow-xl transition-shadow duration-300">
+<span class="material-icons-outlined text-4xl text-primary mb-6">verified_user</span>
+<h3 class="text-xl font-bold text-heading-light dark:text-heading-dark mb-3">Grado Institucional</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Construido a escala con protocolos de seguridad de nivel bancario, registros de auditoría completos e integración con custodios cualificados.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-light dark:bg-background-dark overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2">
+<h2 class="text-3xl lg:text-4xl font-display font-bold text-heading-light dark:text-heading-dark mb-6">Cómo Operamos</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
+                        Nuestro motor de tokenización sigue un riguroso proceso de cuatro pasos para garantizar la calidad y el cumplimiento en cada etapa del ciclo de vida del activo.
+                    </p>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="flex-shrink-0 mt-1">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">1</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-heading-light dark:text-heading-dark">Selección y Diligencia Debida de Activos</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Rigurosa verificación de los activos subyacentes, centrándose en la estabilidad del flujo de caja y la precisión de la valoración.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 mt-1">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">2</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-heading-light dark:text-heading-dark">Estructuración Legal</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Creación de SPV y redacción de derechos contractuales para vincular el activo físico al token digital.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 mt-1">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">3</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-heading-light dark:text-heading-dark">Creación y Distribución de Tokens</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Emisión de tokens de seguridad en una blockchain permisionada, distribuidos a inversores con KYC verificado.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 mt-1">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">4</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-heading-light dark:text-heading-dark">Gestión del Ciclo de Vida</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Distribución automatizada de dividendos/rendimientos mediante contratos inteligentes e informes continuos.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 relative">
+<div class="absolute -inset-4 bg-gradient-to-r from-blue-100 to-sky-100 dark:from-blue-900/20 dark:to-sky-900/20 rounded-full blur-3xl opacity-50"></div>
+<div class="relative bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 rounded-2xl p-8 shadow-2xl">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-4">
+<span class="text-xs font-semibold uppercase text-slate-500">Clase de Activo</span>
+<span class="text-sm font-bold text-heading-light dark:text-heading-dark">Fondo Inmobiliario Comercial IV</span>
+</div>
+<div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-4">
+<span class="text-xs font-semibold uppercase text-slate-500">Estándar de Token</span>
+<span class="text-sm font-bold text-heading-light dark:text-heading-dark">ERC-3643 (Cumplimiento)</span>
+</div>
+<div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-4">
+<span class="text-xs font-semibold uppercase text-slate-500">Estructuración</span>
+<span class="text-sm font-bold text-heading-light dark:text-heading-dark">SPV de Luxemburgo</span>
+</div>
+<div class="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center gap-3">
+<span class="material-icons-outlined text-green-600 dark:text-green-400">check_circle</span>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Auditoría de Contrato Inteligente Aprobada</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-primary text-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-display font-bold mb-4">Nuestro Alcance Global</h2>
+<p class="text-blue-100 max-w-2xl mx-auto">Conectando a los originadores de activos con los fondos de capital globales.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-blue-400/30">
+<div class="p-4">
+<div class="text-4xl lg:text-5xl font-bold mb-2">$500M+</div>
+<div class="text-blue-100 text-sm font-medium uppercase tracking-wider">Activos Tokenizados</div>
+</div>
+<div class="p-4">
+<div class="text-4xl lg:text-5xl font-bold mb-2">12+</div>
+<div class="text-blue-100 text-sm font-medium uppercase tracking-wider">Jurisdicciones</div>
+</div>
+<div class="p-4">
+<div class="text-4xl lg:text-5xl font-bold mb-2">50+</div>
+<div class="text-blue-100 text-sm font-medium uppercase tracking-wider">Socios Institucionales</div>
+</div>
+<div class="p-4">
+<div class="text-4xl lg:text-5xl font-bold mb-2">0</div>
+<div class="text-blue-100 text-sm font-medium uppercase tracking-wider">Violaciones de Seguridad</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-surface-light dark:bg-surface-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl font-display font-bold text-heading-light dark:text-heading-dark mb-6">Confianza y Cumplimiento Primero</h2>
+<p class="text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-16">
+                Operamos dentro de marcos regulados para garantizar los más altos estándares de protección al inversor y seguridad de datos.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="flex flex-col items-center p-6 bg-background-light dark:bg-background-dark rounded-xl border border-slate-200 dark:border-slate-700">
+<span class="material-icons-outlined text-4xl text-slate-400 mb-4">security</span>
+<h4 class="font-semibold text-heading-light dark:text-heading-dark">SOC 2 Tipo II</h4>
+<p class="text-xs text-slate-500 mt-2">Controles de Seguridad Certificados</p>
+</div>
+<div class="flex flex-col items-center p-6 bg-background-light dark:bg-background-dark rounded-xl border border-slate-200 dark:border-slate-700">
+<span class="material-icons-outlined text-4xl text-slate-400 mb-4">policy</span>
+<h4 class="font-semibold text-heading-light dark:text-heading-dark">Cumple con GDPR</h4>
+<p class="text-xs text-slate-500 mt-2">Estándares de Privacidad de Datos</p>
+</div>
+<div class="flex flex-col items-center p-6 bg-background-light dark:bg-background-dark rounded-xl border border-slate-200 dark:border-slate-700">
+<span class="material-icons-outlined text-4xl text-slate-400 mb-4">account_balance</span>
+<h4 class="font-semibold text-heading-light dark:text-heading-dark">AML/KYC</h4>
+<p class="text-xs text-slate-500 mt-2">Detección Integrada</p>
+</div>
+<div class="flex flex-col items-center p-6 bg-background-light dark:bg-background-dark rounded-xl border border-slate-200 dark:border-slate-700">
+<span class="material-icons-outlined text-4xl text-slate-400 mb-4">lock</span>
+<h4 class="font-semibold text-heading-light dark:text-heading-dark">Custodia Cualificada</h4>
+<p class="text-xs text-slate-500 mt-2">Salvaguarda de Activos</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+<div class="col-span-2 lg:col-span-2">
+<div class="flex items-center gap-2 mb-4">
+<img alt="Brisafi Logo" class="h-8 w-auto opacity-80" src="https://www.brisafi.com/icono-transparent.png"/>
+<span class="font-bold text-lg text-slate-700 dark:text-slate-300">Brisafi</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm max-w-xs mb-6">
+                        Plataforma líder en tokenización de derechos económicos sobre activos reales. Democratizando el acceso a inversiones institucionales.
+                    </p>
+<div class="flex space-x-4">
+<a class="text-slate-400 hover:text-primary transition" href="#"><span class="material-icons-round">facebook</span></a>
+<a class="text-slate-400 hover:text-primary transition" href="#"><span class="material-icons-round">smart_display</span></a> 
+<a class="text-slate-400 hover:text-primary transition" href="#"><span class="material-icons-round">work</span></a> 
+</div>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-4">Plataforma</h4>
+<ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary" href="#">Mercado</a></li>
+<li><a class="hover:text-primary" href="#">Cómo funciona</a></li>
+<li><a class="hover:text-primary" href="#">Para emisores</a></li>
+<li><a class="hover:text-primary" href="#">Para inversores</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-4">Compañía</h4>
+<ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary" href="#">Sobre nosotros</a></li>
+<li><a class="hover:text-primary" href="#">Carreras</a></li>
+<li><a class="hover:text-primary" href="#">Blog</a></li>
+<li><a class="hover:text-primary" href="#">Contacto</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-4">Legal</h4>
+<ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary" href="#">Términos de uso</a></li>
+<li><a class="hover:text-primary" href="#">Privacidad</a></li>
+<li><a class="hover:text-primary" href="#">Cookies</a></li>
+<li><a class="hover:text-primary" href="#">Disclaimer</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500 dark:text-slate-500">
+<p>© 2025 Brisafi. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple script to demonstrate dark mode toggling capability 
+        // In a real app, this would check system preference or local storage
+        // For this demo, it just respects the class setup for both modes
+        // Uncomment to test dark mode programmatically:
+        // document.documentElement.classList.add('dark');
+    </script>
+</body></html>
